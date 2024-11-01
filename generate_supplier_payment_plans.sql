@@ -5,6 +5,7 @@
  3. Merging installments with the monthly calendar using the installment key and month difference, then grouping by supplier and date range, summing `payment_amount`.
  4. Calculating `BALANCE_OUTSTANDING` using a window function as: SUM(Total invoice amount) - (Total payments already paid).
  */
+USE memory.default;
 WITH PAYMENT_DATE_RANGE AS (
     SELECT
         PAYMENT_DATE,
